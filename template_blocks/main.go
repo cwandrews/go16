@@ -1,3 +1,4 @@
+// This has to be compiled with a go 1.6 compiler
 package main
 
 import (
@@ -8,7 +9,10 @@ import (
 )
 
 const (
-	root_tmpl    = `Names:{{block "list" .}}{{"\n"}}{{range .}}{{println "-" .}}{{end}}{{end}}`
+	// Define a root template where a block gets declared called
+	// list
+	root_tmpl = `Names:{{block "list" .}}{{"\n"}}{{range .}}{{println "-" .}}{{end}}{{end}}`
+	// Define an overlay template to that redefines the block
 	overlay_tmpl = `{{define "list"}} {{join . ", "}}{{end}}`
 )
 
