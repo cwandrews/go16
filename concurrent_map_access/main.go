@@ -12,6 +12,8 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(workers)
 	m := map[int]int{}
+	// we are going to spin up a bunch of go routines that write
+	// to the same map a bunch
 	for i := 1; i <= workers; i++ {
 		go func(i int) {
 			for j := 0; j < i; j++ {
@@ -21,5 +23,7 @@ func main() {
 		}(i)
 	}
 	wg.Wait()
+	// read from a map that is also being written to by a ton of
+	// go routines
 	fmt.Println(m)
 }
