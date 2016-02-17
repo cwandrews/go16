@@ -17,7 +17,7 @@ func (s ByFirstName) Len() int           { return len(s) }
 func (s ByFirstName) Swap(i, j int)      { s[i], s[j] = s[j], s[i] }
 func (s ByFirstName) Less(i, j int) bool { return s[i].first < s[j].first }
 
-func main() {
+func sort_some_people() []People {
 	people := []People{
 		{"Bill", "Clinton"}, {"Romeo", "Capulet"},
 		{"Bill", "Cosby"}, {"Juliet", "Montague"},
@@ -25,5 +25,11 @@ func main() {
 		{"April", "O'Neal"},
 	}
 	sort.Sort(ByFirstName(people))
-	fmt.Println(people)
+	return people
+}
+
+func main() {
+	peeps := sort_some_people()
+	fmt.Println(peeps)
+
 }
