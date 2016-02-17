@@ -1,3 +1,7 @@
+// Run this with a go 1.5 compiler and you will either get a 'Fatal
+// map state' panic or a 'Nil pointer dereference' panic. If you run
+// it with a 1.6 compiler you will get a 'concurrent map read and map
+// write' panic
 package main
 
 import (
