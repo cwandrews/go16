@@ -1,7 +1,9 @@
-// Run this with a go 1.5 compiler and you will either get a 'Fatal
-// map state' panic or a 'Nil pointer dereference' panic. If you run
-// it with a 1.6 compiler you will get a 'concurrent map read and map
-// write' panic
+// Run this with a go 1.5 compiler and you will either get an error
+// message that may not be helpful or consistent ('overflow is not
+// nil', 'bad map state', 'nil pointer dereference', etc.). With a 1.6
+// compiler you will get a 'concurrent map read and map write' error
+// message. You can then use the race detector to get more info on the
+// problem.
 package main
 
 import (
