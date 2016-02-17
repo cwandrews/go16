@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
+	// want to start up a bunch of go routines
 	var ready sync.WaitGroup
 	const workers = 99
 

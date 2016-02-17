@@ -1,5 +1,23 @@
+* Golang 1.6
+[[./img/Go_release_party_1.6_wide.png]]
+* About Me
+Charlie Andrews
+
+[[https://github.com/cwandrews][Github]]
+[[https://twitter.com/cwndrws][Twitter]]
+* Umbel
+Thanks to Umbel for sponsoring this Meetup.
+
+Open Positions:
+- Platform Engineer
+- Cassandra Database Engineer
+- Front End Developer
+
+Checkout the [[https://www.umbel.com/engineering/][Umbel engineering page]] to see the latest open positions.
+* Slides
+These slides are available on [[https://github.com/cwandrews/go16][github]].
 * Go 1.6
-- test Go Release, version 1.6, arrives six months after 1.5
+- The latest Go Release, version 1.6, arrives six months after 1.5.
 - Most of its changes are in the implementation of the language,
   runtime, and libraries. There are no changes to the language
   specification.
@@ -19,7 +37,7 @@ Release timeline:
 - Go 1.3 released 18th June, 2014
 - Go 1.4 released 10th December, 2014
 - Go 1.5 released 19th August, 2015
-- Go 1.6 is expected to be released February, 2016
+- Go 1.6 released earlier this afternoon (17th February, 2016)
 * What's new?
 - Changes to the Language
 - Ports
@@ -90,6 +108,7 @@ _NONE_
 - A program can then overlay that template with new definitions for
   the "title" and "page" blocks to reuse the formatting for another
   page.
+- [[./template_blocks/main.go][example]]
 * Sort Performance
 - In the sort package, the implementation of Sort has been rewritten
   to make about 10% fewer calls to the Interface's Less and Swap
