@@ -71,6 +71,8 @@ _NONE_
 - For Go 1.6, a lot of work went into optimising and tuning the gc,
   enabling far larger heaps to be managed within the 10ms latency
   goal.
+- [[http://www.infoq.com/presentations/go-gc-performance][here]] is a talk by Rick Hudson about the improvements to the garbage
+  collector between 1.5 and 1.6
 * HTTP/2
 - Go 1.6 adds transparent support in the net/http package for the new
   HTTP/2 protocol.
